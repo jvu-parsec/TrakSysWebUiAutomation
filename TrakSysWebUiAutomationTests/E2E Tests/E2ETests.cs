@@ -1,6 +1,7 @@
 using Microsoft.Playwright;
 using Microsoft.Playwright.NUnit;
-using TrakSysWebUiAutomationFramework.Driver;
+using TSWebUiAutomationFramework.Driver;
+using TSWebUiAutomationFramework.Config;
 
 namespace TrakSysWebUiAutomationTests.E2E_Tests
 {
@@ -8,20 +9,28 @@ namespace TrakSysWebUiAutomationTests.E2E_Tests
     [Parallelizable(ParallelScope.Self)]
     public class E2ETests
     {
-        private PlaywrightDriver playwrightDriver;
-
+        protected IPage page;
 
         [SetUp]
         public void Setup()
         {
-            playwrightDriver = new PlaywrightDriver();
+            //playwright -> browser -> context -> page
+            var testSettings = new TestSettings()
+            {
+                BrowserType = Browsers.Chromium,
+                Timeout = 30000,
+                Headless = false,
+                SlowMo = 250,
+                BaseUrl = "http://win-2u8u3utcd9b/TS/pages/home/"
+            };
+
+            var playwright = new PlaywrightManager(testSettings);
+            page = playwright.Page;
         }
 
         [Test, Retry(3)]
         public async Task Test_LoginAdminValidCredentials()
         {
-            var page = playwrightDriver.Page;
-
             await page.GotoAsync("http://win-2u8u3utcd9b/TS/Account/LogOn.aspx/");
 
             //login form locators

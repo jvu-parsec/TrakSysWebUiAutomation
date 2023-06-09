@@ -21,7 +21,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\TrakSysWebUiAutomationFramework\TrakSysWebUiAutomationFramework.csproj" />
+    <ProjectReference Include="..\TrakSysWebUiAutomationFramework\TSWebUiAutomationFramework.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Pages\" />
   </ItemGroup>
 
 </Project>

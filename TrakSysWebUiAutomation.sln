@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.6.33723.286
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrakSysWebUiAutomationFramework", "TrakSysWebUiAutomationFramework\TrakSysWebUiAutomationFramework.csproj", "{8FF5A2D5-3D43-46B5-A7F4-CF4B7B0BC156}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TSWebUiAutomationFramework", "TrakSysWebUiAutomationFramework\TSWebUiAutomationFramework.csproj", "{8FF5A2D5-3D43-46B5-A7F4-CF4B7B0BC156}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrakSysWebUiAutomationTests", "TrakSysWebUiAutomationTests\TrakSysWebUiAutomationTests.csproj", "{A64A6957-4958-460C-AF6A-CF726A60709F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TSWebUiAutomationTests", "TrakSysWebUiAutomationTests\TSWebUiAutomationTests.csproj", "{A64A6957-4958-460C-AF6A-CF726A60709F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -1,26 +1,43 @@
 ﻿using Microsoft.Playwright;
+using Microsoft.Playwright.NUnit;
+using Microsoft.VisualStudio.TestPlatform.CommunicationUtilities.Resources;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using TrakSysWebUiAutomationFramework.Driver;
-using static Microsoft.AspNetCore.Hosting.Internal.HostingApplication;
+using TSWebUiAutomationFramework.Config;
+using TSWebUiAutomationFramework.Driver;
 
-namespace TrakSysWebUiAutomationTests.E2E_Tests
+namespace TSWebUiAutomationTests.E2E_Tests
 {
     [TestFixture]
     [Parallelizable(ParallelScope.Self)]
-    public class E2ETests2
+    public class E2ETests2 : PageTest
     {
-        private PlaywrightDriver playwrightDriver;
         private IPage page;
 
         [SetUp]
         public void Setup()
         {
-            playwrightDriver = new PlaywrightDriver();
-            page = playwrightDriver.Page;
+            var testSettings = new TestSettings()
+            {
+                BrowserType = Browsers.Chrome,
+                Timeout = 30000,
+                Headless = false,
+                SlowMo = 250,
+                BaseUrl = "http://win-2u8u3utcd9b/TS/pages/home/"
+            };
+
+            var playwright = new PlaywrightManager(testSettings);
+            page = playwright.Page;
+
+            page.Context.Tracing.StartAsync(new()
+            {
+                Screenshots = true,
+                Snapshots = true,
+                Sources = true
+            });
         }
 
         [TearDown]

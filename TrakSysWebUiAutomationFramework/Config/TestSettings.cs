@@ -3,26 +3,26 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using TrakSysWebUiAutomationFramework.Driver;
+using TSWebUiAutomationFramework.Driver;
 
-namespace TrakSysWebUiAutomationFramework.Config
+namespace TSWebUiAutomationFramework.Config
 {
     public class TestSettings
     {
-        public DriverType DriverType { get; set; }
-        public string BaseUrl { get; set; }
+        public BrowserTypes BrowserType { get; set; }
+        public string? BaseUrl { get; set; }
         public string[]? Args { get; set; }
-        public float? Timeout = PlaywrightDriverInitializer.DEFAULT_TIMEOUT;
+        public int? Timeout = PlaywrightManager.DefaultTimeout;
         public bool? Headless { get; set; }
-        public float? SlowMo { get; set; }
+        public int? SlowMo { get; set; }
     }
 
-    public enum DriverType
+    public enum BrowserTypes
     {
         Chromium,
         Firefox,
         WebKit,
         Edge,
-        Chrome,
+        Chrome
     }
 }
