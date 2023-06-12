@@ -22,7 +22,7 @@ namespace TSWebUiAutomationFramework.Driver
             _testSettings = settings;
 
             _browser = Task.Run(SetupPlaywrightAndBrowser);
-            _page = Task.Run(CreatePageAsync);
+            _page = Task.Run(GetNewPageAsync);
         }
 
         public IPage Page => _page.Result;  //expression syntax; same as this: public IPage Page() { return _page.Result; }
