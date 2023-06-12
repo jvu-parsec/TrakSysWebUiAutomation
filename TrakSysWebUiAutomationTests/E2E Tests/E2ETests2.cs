@@ -6,14 +6,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using TSWebUiAutomationFramework.Config;
-using TSWebUiAutomationFramework.Driver;
+using TsWebUiAutomationFramework.Config;
+using TsWebUiAutomationFramework.Driver;
 
-namespace TSWebUiAutomationTests.E2E_Tests
+namespace TsWebUiAutomationTests.E2E_Tests
 {
     [TestFixture]
     [Parallelizable(ParallelScope.Self)]
-    public class E2ETests2 : PageTest
+    public class E2ETests2
     {
         private IPage page;
 
@@ -22,7 +22,7 @@ namespace TSWebUiAutomationTests.E2E_Tests
         {
             var testSettings = new TestSettings()
             {
-                BrowserType = Browsers.Chrome,
+                Browser = Browser.Chromium,
                 Timeout = 30000,
                 Headless = false,
                 SlowMo = 250,

@@ -4,9 +4,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using TSWebUiAutomationFramework.Config;
+using TsWebUiAutomationFramework.Config;
 
-namespace TSWebUiAutomationFramework.Driver
+namespace TsWebUiAutomationFramework.Driver
 {
     public class PlaywrightDriverInitializer
     {
