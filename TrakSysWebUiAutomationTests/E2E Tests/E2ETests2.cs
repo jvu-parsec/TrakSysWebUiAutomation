@@ -30,7 +30,7 @@ namespace TsWebUiAutomationTests.E2E_Tests
             };
 
             var playwright = new PlaywrightManager(testSettings);
-            page = playwright.Page;
+            page = playwright.Page.Result;
 
             page.Context.Tracing.StartAsync(new()
             {

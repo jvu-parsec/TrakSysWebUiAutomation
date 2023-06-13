@@ -1,0 +1,58 @@
+﻿[
+  {
+    "tagType": "Virtual",
+    "grandparentTagGroup": "TESTGROUP",
+    "parentTagGroup": "Batching TG",
+    "tagGroup": "B2 TG",
+    "name": "B2T.PRODUCT",
+    "dataType": "String"
+  },
+  {
+    "tagType": "Virtual",
+    "grandparentTagGroup": "TESTGROUP",
+    "parentTagGroup": "Batching TG",
+    "tagGroup": "B2 TG",
+    "name": "B2T.JOB",
+    "dataType": "String"
+  },
+  {
+    "tagType": "Virtual",
+    "grandparentTagGroup": "TESTGROUP",
+    "parentTagGroup": "Batching TG",
+    "tagGroup": "B2 TG",
+    "name": "B2T.BATCH",
+    "dataType": "String"
+  },
+  {
+    "tagType": "Virtual",
+    "grandparentTagGroup": "TESTGROUP",
+    "parentTagGroup": "Batching TG",
+    "tagGroup": "B2 TG",
+    "name": "B2T.SETUP",
+    "dataType": "Discrete"
+  },
+  {
+    "tagType": "Virtual",
+    "grandparentTagGroup": "TESTGROUP",
+    "parentTagGroup": "Batching TG",
+    "tagGroup": "B2 TG",
+    "name": "B2T.MIX",
+    "dataType": "Discrete"
+  },
+  {
+    "tagType": "Virtual",
+    "grandparentTagGroup": "TESTGROUP",
+    "parentTagGroup": "Batching TG",
+    "tagGroup": "B2 TG",
+    "name": "B2T.ADD",
+    "dataType": "Discrete"
+  },
+  {
+    "tagType": "Virtual",
+    "grandparentTagGroup": "TESTGROUP",
+    "parentTagGroup": "Batching TG",
+    "tagGroup": "B2 TG",
+    "name": "B2T.EMPTY",
+    "dataType": "Discrete"
+  }
+]

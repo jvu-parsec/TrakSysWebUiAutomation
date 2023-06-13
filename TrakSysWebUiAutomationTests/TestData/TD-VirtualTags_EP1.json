@@ -1,0 +1,137 @@
+﻿[
+  {
+    "ancestorTagGroup": "TESTGROUP",
+    "grandparentTagGroup": "Extrusion and Packaging TG",
+    "parentTagGroup": "Line 1 TG",
+    "tagGroup": "[ Job ]",
+    "tagType": "Virtual",
+    "name": "EP1T.JOB",
+    "dataType": "String"
+  },
+  {
+    "ancestorTagGroup": "TESTGROUP",
+    "grandparentTagGroup": "Extrusion and Packaging TG",
+    "parentTagGroup": "Line 1 TG",
+    "tagGroup": "[ Product ]",
+    "tagType": "Virtual",
+    "name": "EP1T.PRODUCT",
+    "dataType": "String"
+  },
+  {
+    "ancestorTagGroup": "TESTGROUP",
+    "grandparentTagGroup": "Extrusion and Packaging TG",
+    "parentTagGroup": "Line 1 TG",
+    "tagGroup": "[ Event ]",
+    "tagType": "Virtual",
+    "name": "EP1T.BREAK",
+    "dataType": "Discrete"
+  },
+  {
+    "ancestorTagGroup": "TESTGROUP",
+    "grandparentTagGroup": "Extrusion and Packaging TG",
+    "parentTagGroup": "Line 1 TG",
+    "tagGroup": "[ Event ]",
+    "tagType": "Virtual",
+    "name": "EP1T.NOT_SCHEDULED",
+    "dataType": "Discrete"
+  },
+  {
+    "ancestorTagGroup": "TESTGROUP",
+    "grandparentTagGroup": "Extrusion and Packaging TG",
+    "parentTagGroup": "Line 1 TG",
+    "tagGroup": "[ Product ]",
+    "tagType": "Virtual",
+    "name": "EP1T.THEORETICAL_RATE",
+    "dataType": "Integer"
+  },
+  {
+    "ancestorTagGroup": "TESTGROUP",
+    "grandparentTagGroup": "Extrusion and Packaging TG",
+    "parentTagGroup": "Line 1 TG",
+    "tagGroup": "[ Product ]",
+    "tagType": "Virtual",
+    "name": "EP1T.WIDGETS_PER_BOX",
+    "dataType": "Integer"
+  },
+  {
+    "ancestorTagGroup": "TESTGROUP",
+    "grandparentTagGroup": "Extrusion and Packaging TG",
+    "parentTagGroup": "Line 1 TG",
+    "tagGroup": "[ Product ]",
+    "tagType": "Virtual",
+    "name": "EP1T.BOXES_PER_CASE",
+    "dataType": "Integer"
+  },
+  {
+    "ancestorTagGroup": "TESTGROUP",
+    "grandparentTagGroup": "Extrusion and Packaging TG",
+    "parentTagGroup": "Line 1 TG",
+    "tagGroup": "[ Product ]",
+    "tagType": "Virtual",
+    "name": "EP1T.WIDGETS_PER_CASE",
+    "dataType": "Integer"
+  },
+  {
+    "ancestorTagGroup": "TESTGROUP",
+    "grandparentTagGroup": "Extrusion and Packaging TG",
+    "parentTagGroup": "Line 1 TG",
+    "tagGroup": "[ Product ]",
+    "tagType": "Virtual",
+    "name": "EP1T.EXTRUDER.TOTAL_WIDGETS",
+    "dataType": "Integer"
+  },
+  {
+    "ancestorTagGroup": "TESTGROUP",
+    "grandparentTagGroup": "Extrusion and Packaging TG",
+    "parentTagGroup": "Line 1 TG",
+    "tagGroup": "Extruder",
+    "tagType": "Virtual",
+    "name": "EP1T.EXTRUDER.FAULT",
+    "dataType": "Discrete"
+  },
+  {
+    "ancestorTagGroup": "TESTGROUP",
+    "grandparentTagGroup": "Extrusion and Packaging TG",
+    "parentTagGroup": "Line 1 TG",
+    "tagGroup": "Boxer",
+    "tagType": "Virtual",
+    "name": "EP1T.BOXER.JAM",
+    "dataType": "Discrete"
+  },
+  {
+    "ancestorTagGroup": "TESTGROUP",
+    "grandparentTagGroup": "Extrusion and Packaging TG",
+    "parentTagGroup": "Line 1 TG",
+    "tagGroup": "Boxer",
+    "tagType": "Virtual",
+    "name": "EP1T.BOXER.NEEDS_BOXES",
+    "dataType": "Discrete"
+  },
+  {
+    "ancestorTagGroup": "TESTGROUP",
+    "grandparentTagGroup": "Extrusion and Packaging TG",
+    "parentTagGroup": "Line 1 TG",
+    "tagGroup": "[ Counter ]",
+    "tagType": "Virtual",
+    "name": "EP1T.CASEPACKER.GOOD_CASES",
+    "dataType": "Discrete"
+  },
+  {
+    "ancestorTagGroup": "TESTGROUP",
+    "grandparentTagGroup": "Extrusion and Packaging TG",
+    "parentTagGroup": "Line 1 TG",
+    "tagGroup": "Casepacker",
+    "tagType": "Virtual",
+    "name": "EP1T.CASEPACKER.JAM",
+    "dataType": "Discrete"
+  },
+  {
+    "ancestorTagGroup": "TESTGROUP",
+    "grandparentTagGroup": "Extrusion and Packaging TG",
+    "parentTagGroup": "Line 1 TG",
+    "tagGroup": "Casepacker",
+    "tagType": "Virtual",
+    "name": "EP1T.CASEPACKER.NEEDS_CASES",
+    "dataType": "Discrete"
+  }
+]

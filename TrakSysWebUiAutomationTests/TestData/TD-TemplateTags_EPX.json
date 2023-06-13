@@ -1,0 +1,122 @@
+﻿[
+  {
+    "grandparentTagGroup": "TESTGROUP",
+    "parentTagGroup": "Extrusion and Packaging TG",
+    "tagGroup": "Templates TG",
+    "tagType": "Template",
+    "name": "EPXT.JOB",
+    "dataType": "String"
+  },
+  {
+    "grandparentTagGroup": "TESTGROUP",
+    "parentTagGroup": "Extrusion and Packaging TG",
+    "tagGroup": "Templates TG",
+    "tagType": "Template",
+    "name": "EPXT.PRODUCT",
+    "dataType": "String"
+  },
+  {
+    "grandparentTagGroup": "TESTGROUP",
+    "parentTagGroup": "Extrusion and Packaging TG",
+    "tagGroup": "Templates TG",
+    "tagType": "Template",
+    "name": "EPXT.BREAK",
+    "dataType": "Discrete"
+  },
+  {
+    "grandparentTagGroup": "TESTGROUP",
+    "parentTagGroup": "Extrusion and Packaging TG",
+    "tagGroup": "Templates TG",
+    "tagType": "Template",
+    "name": "EPXT.NOT_SCHEDULED",
+    "dataType": "Discrete"
+  },
+  {
+    "grandparentTagGroup": "TESTGROUP",
+    "parentTagGroup": "Extrusion and Packaging TG",
+    "tagGroup": "Templates TG",
+    "tagType": "Template",
+    "name": "EPXT.THEORETICAL_RATE",
+    "dataType": "Integer"
+  },
+  {
+    "grandparentTagGroup": "TESTGROUP",
+    "parentTagGroup": "Extrusion and Packaging TG",
+    "tagGroup": "Templates TG",
+    "tagType": "Template",
+    "name": "EPXT.WIDGETS_PER_BOX",
+    "dataType": "Integer"
+  },
+  {
+    "grandparentTagGroup": "TESTGROUP",
+    "parentTagGroup": "Extrusion and Packaging TG",
+    "tagGroup": "Templates TG",
+    "tagType": "Template",
+    "name": "EPXT.BOXES_PER_CASE",
+    "dataType": "Integer"
+  },
+  {
+    "grandparentTagGroup": "TESTGROUP",
+    "parentTagGroup": "Extrusion and Packaging TG",
+    "tagGroup": "Templates TG",
+    "tagType": "Template",
+    "name": "EPXT.WIDGETS_PER_CASE",
+    "dataType": "Integer"
+  },
+  {
+    "grandparentTagGroup": "TESTGROUP",
+    "parentTagGroup": "Extrusion and Packaging TG",
+    "tagGroup": "Templates TG",
+    "tagType": "Template",
+    "name": "EPXT.EXTRUDER.TOTAL_WIDGETS",
+    "dataType": "Integer"
+  },
+  {
+    "grandparentTagGroup": "TESTGROUP",
+    "parentTagGroup": "Extrusion and Packaging TG",
+    "tagGroup": "Templates TG",
+    "tagType": "Template",
+    "name": "EPXT.EXTRUDER.FAULT",
+    "dataType": "Discrete"
+  },
+  {
+    "grandparentTagGroup": "TESTGROUP",
+    "parentTagGroup": "Extrusion and Packaging TG",
+    "tagGroup": "Templates TG",
+    "tagType": "Template",
+    "name": "EPXT.BOXER.JAM",
+    "dataType": "Discrete"
+  },
+  {
+    "grandparentTagGroup": "TESTGROUP",
+    "parentTagGroup": "Extrusion and Packaging TG",
+    "tagGroup": "Templates TG",
+    "tagType": "Template",
+    "name": "EPXT.BOXER.NEEDS_BOXES",
+    "dataType": "Discrete"
+  },
+  {
+    "grandparentTagGroup": "TESTGROUP",
+    "parentTagGroup": "Extrusion and Packaging TG",
+    "tagGroup": "Templates TG",
+    "tagType": "Template",
+    "name": "EPXT.CASEPACKER.GOOD_CASES",
+    "dataType": "Discrete"
+  },
+  {
+    "grandparentTagGroup": "TESTGROUP",
+    "parentTagGroup": "Extrusion and Packaging TG",
+    "tagGroup": "Templates TG",
+    "tagType": "Template",
+    "name": "EPXT.CASEPACKER.JAM",
+    "dataType": "Discrete"
+  },
+  {
+    "grandparentTagGroup": "TESTGROUP",
+    "parentTagGroup": "Extrusion and Packaging TG",
+    "tagGroup": "Templates TG",
+    "tagType": "Template",
+    "name": "EPXT.CASEPACKER.NEEDS_CASES",
+    "dataType": "Discrete"
+  }
+]

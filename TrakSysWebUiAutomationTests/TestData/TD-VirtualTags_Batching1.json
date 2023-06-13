@@ -1,0 +1,44 @@
+[
+  {
+    "tagType": "Virtual",
+    "parentTagGroup": "Batching TESTGROUP",
+    "tagGroup": "B1T",
+    "name": "B1T.PRODUCT",
+    "dataType": "String"
+  },
+  {
+    "tagType": "Virtual",
+    "parentTagGroup": "Batching TESTGROUP",
+    "tagGroup": "B1T",
+    "name": "B1T.JOB",
+    "dataType": "String"
+  },
+  {
+    "tagType": "Virtual",
+    "parentTagGroup": "Batching TESTGROUP",
+    "tagGroup": "B1T",
+    "name": "B1T.BATCH",
+    "dataType": "String"
+  },
+  {
+    "tagType": "Virtual",
+    "parentTagGroup": "Batching TESTGROUP",
+    "tagGroup": "B1T",
+    "name": "B1T.SETUP",
+    "dataType": "Discrete"
+  },
+  {
+    "tagType": "Virtual",
+    "parentTagGroup": "Batching TESTGROUP",
+    "tagGroup": "B1T",
+    "name": "B1T.MIX",
+    "dataType": "Discrete"
+  },
+  {
+    "tagType": "Virtual",
+    "parentTagGroup": "Batching TESTGROUP",
+    "tagGroup": "B1T",
+    "name": "B1T.EMPTY",
+    "dataType": "Discrete"
+  }
+]

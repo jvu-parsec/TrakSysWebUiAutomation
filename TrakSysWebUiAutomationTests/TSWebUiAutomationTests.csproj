@@ -39,9 +39,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Pages\Config\" />
-    <Folder Include="Pages\Dev\" />
-    <Folder Include="Pages\Admin\" />
     <Folder Include="Pages\Settings\" />
     <Folder Include="Pages\Search\" />
   </ItemGroup>

@@ -13,9 +13,9 @@ namespace TsWebUiAutomationFramework.Driver
 {
     public class PlaywrightManager
     {
-        private readonly Task<IBrowser> _browser;
-        private readonly Task<IBrowserContext> _context;
-        private readonly Task<IPage> _page;
+        private readonly Lazy<Task<IBrowser>> _browser;
+        private readonly Lazy<Task<IBrowserContext>> _context;
+        private readonly Lazy<Task<IPage>> _page;
         private readonly TestSettings _testSettings;
         public const int DefaultTimeout = 30000; //default timeout in milliseconds, 30 sec by default
 
@@ -25,19 +25,27 @@ namespace TsWebUiAutomationFramework.Driver
         {
             _testSettings = settings;
 
-            _browser = Task.Run(SetupPlaywrightAndBrowser);
-            _context = Task.Run(GetNewContextAsync);
-            if ((bool)settings.Trace) 
-            { 
-                StartTracing(_context.Result); 
+            _browser = new Lazy<Task<IBrowser>>(SetupPlaywrightAndBrowser);
+            _context = new Lazy<Task<IBrowserContext>>(GetNewContextAsync);
+            if ((bool) settings.Trace)
+            {
+                StartTracing(_context.Value.Result);
             }
 
-            _page = Task.Run(GetNewPageAsync);
+            _page = new Lazy<Task<IPage>>(GetNewPageAsync);
+            //_browser = Task.Run(SetupPlaywrightAndBrowser);
+            //_context = Task.Run(GetNewContextAsync);
+            //if ((bool)settings.Trace) 
+            //{ 
+            //    StartTracing(_context.Result); 
+            //}
+
+            //_page = Task.Run(GetNewPageAsync);
         }
 
-        public IPage Page => _page.Result;  //expression syntax; same as this: public IPage Page() { return _page.Result; }
-        public IBrowser Browser => _browser.Result;  //expression syntax; same as this: public IPage Page() { return _page.Result; }
-        public IBrowserContext Context => _context.Result;  //expression syntax; same as this: public IPage Page() { return _page.Result; }
+        public Task<IPage> Page => _page.Value;  //expression syntax; same as this: public IPage Page() { return _page.Result; }
+        public Task<IBrowser> Browser => _browser.Value;  //expression syntax; same as this: public IPage Page() { return _page.Result; }
+        public Task<IBrowserContext> Context => _context.Value;  //expression syntax; same as this: public IPage Page() { return _page.Result; }
 
         public static async Task StartTracing(IBrowserContext context)
         {
@@ -81,7 +89,7 @@ namespace TsWebUiAutomationFramework.Driver
         private async Task<IPage> GetNewPageAsync()
         {
             //return await _browser.Result.NewPageAsync();
-            return await _context.Result.NewPageAsync();
+            return await _context.Value.Result.NewPageAsync();
         }
         
         private async Task<IBrowserContext> GetNewContextAsync()
@@ -94,7 +102,7 @@ namespace TsWebUiAutomationFramework.Driver
                 RecordVideoSize = new RecordVideoSize() { Width = 1280, Height = 1024 }
             };
 
-            return bool.Parse(config.GetSetting("video")) ? await (await _browser).NewContextAsync(options) : await (await _browser).NewContextAsync();
+            return bool.Parse(config.GetSetting("video")) ? await (await _browser.Value).NewContextAsync(options) : await (await _browser.Value).NewContextAsync();
         }
 
         private async Task<IBrowser> GetChromiumBrowserAsync(TestSettings settings)
@@ -153,50 +161,6 @@ namespace TsWebUiAutomationFramework.Driver
                 Headless = headless,
                 SlowMo = slowmo
             };
-        }
-
-        public BrowserTypeLaunchOptions GetBrowserOptionsFromConfig()
-        {
-            return new BrowserTypeLaunchOptions()
-            {
-                Timeout = float.Parse(ConfigurationManager.AppSettings["timeout"]),
-                Headless = bool.Parse(ConfigurationManager.AppSettings["headless"]),
-                SlowMo = float.Parse(ConfigurationManager.AppSettings["slowmo"])
-            };
-        }
-
-        public async Task<IBrowser> GetBrowserTypeFromConfig()
-        {
-            var playwright = await Playwright.CreateAsync();
-
-            string browserName = ConfigurationManager.AppSettings["browser"].ToLower();
-            var browserOptions = GetBrowserOptionsFromConfig();
-
-            if(browserName == "webkit")
-            {
-                browserOptions.Channel = "webkit";
-                return await playwright.Webkit.LaunchAsync(browserOptions);
-            }
-            else if(browserName == "chrome")
-            {
-                browserOptions.Channel = "chrome";
-                return await playwright.Chromium.LaunchAsync(browserOptions);
-            }
-            else if (browserName == "edge")
-            {
-                browserOptions.Channel = "msedge";
-                return await playwright.Chromium.LaunchAsync(browserOptions);
-            }
-            else if (browserName == "firefox")
-            {
-                browserOptions.Channel = "firefox";
-                return await playwright.Chromium.LaunchAsync(browserOptions);
-            }
-            else
-            {
-                browserOptions.Channel = "chromium";
-                return await playwright.Chromium.LaunchAsync(browserOptions);
-            }
         }
     }
 }
