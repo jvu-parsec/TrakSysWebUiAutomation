@@ -24,7 +24,7 @@ namespace TsWebUiAutomationTests.Pages.Login
 
         public async Task Login(string username, string password)
         {
-            await _page.GotoAsync("http://win-2u8u3utcd9b/TS/Account/LogOn.aspx/");
+            //await _page.GotoAsync("http://win-2u8u3utcd9b/TS/Account/LogOn.aspx/");
 
             await _txtUsername.FillAsync(username);
             await _txtPassword.FillAsync(password);

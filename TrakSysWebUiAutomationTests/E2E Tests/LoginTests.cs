@@ -36,12 +36,15 @@ namespace TsWebUiAutomationTests.E2E_Tests
         [SetUp]
         public async Task Setup()
         {
+            testSettings.BaseUrl = "http://tsqualityvmjvu/TS/";
             //playwright->browser->context->page: create new playwright instance, browser instance, set browser context via config file values, get new page instance
             var playwright = new PlaywrightManager(testSettings);
             page = await playwright.Page;
 
+            await page.GotoAsync(testSettings.BaseUrl + "account/logon.aspx");
+
             LoginPage loginPage = new LoginPage(page);
-            await loginPage.Login("administrator", "Test123$$");
+            await loginPage.Login("administrator", "Test!23");
         }
 
         [TearDown]
