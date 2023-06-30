@@ -27,7 +27,6 @@ namespace TsWebUiAutomationTests.Pages
         private ILocator _lnkLogOff => _btnUsername.GetByText("Log Off");
 
 
-
         public BasePage(IPage page) { _page = page; }
 
         public async Task<DevPage> GoToDevPage()

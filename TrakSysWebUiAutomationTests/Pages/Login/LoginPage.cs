@@ -11,6 +11,7 @@ namespace TsWebUiAutomationTests.Pages.Login
     public class LoginPage : BasePage
     {
         private readonly IPage _page;
+        public IPage Page { get { return _page; } }
 
         public LoginPage(IPage page) : base(page) 
         {

@@ -27,7 +27,7 @@ namespace TsWebUiAutomationFramework.Driver
 
             _browser = new Lazy<Task<IBrowser>>(SetupPlaywrightAndBrowser);
             _context = new Lazy<Task<IBrowserContext>>(GetNewContextAsync);
-            if ((bool) settings.Trace)
+            if ((bool) _testSettings.Trace)
             {
                 StartTracing(_context.Value.Result);
             }
@@ -43,7 +43,8 @@ namespace TsWebUiAutomationFramework.Driver
             //_page = Task.Run(GetNewPageAsync);
         }
 
-        public Task<IPage> Page => _page.Value;  //expression syntax; same as this: public IPage Page() { return _page.Result; }
+        //public Task<IPage> Page => _page.Value;  //expression syntax; same as this: public IPage Page() { return _page.Result; }
+        public Task<IPage> Page { get { return _page.Value; } private set { } }
         public Task<IBrowser> Browser => _browser.Value;  //expression syntax; same as this: public IPage Page() { return _page.Result; }
         public Task<IBrowserContext> Context => _context.Value;  //expression syntax; same as this: public IPage Page() { return _page.Result; }
 
@@ -102,10 +103,11 @@ namespace TsWebUiAutomationFramework.Driver
                 RecordVideoSize = new RecordVideoSize() { Width = 1280, Height = 1024 }
             };
 
-            return bool.Parse(config.GetSetting("video")) ? await (await _browser.Value).NewContextAsync(options) : await (await _browser.Value).NewContextAsync();
+      //return bool.Parse(config.GetSetting("video")) ? await (await _browser.Value).NewContextAsync(options) : await (await _browser.Value).NewContextAsync();
+          return (bool)_testSettings.Video ? await (await _browser.Value).NewContextAsync(options) : await (await _browser.Value).NewContextAsync();
         }
 
-        private async Task<IBrowser> GetChromiumBrowserAsync(TestSettings settings)
+    private async Task<IBrowser> GetChromiumBrowserAsync(TestSettings settings)
         {
             var options = GetLaunchOptions(settings.Args, settings.Timeout, settings.Headless, settings.SlowMo);
             options.Channel = "chromium";
